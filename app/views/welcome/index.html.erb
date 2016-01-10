@@ -1,0 +1,45 @@
+
+    <div class="wrapper wrapper_padding clearfix">
+      <div class="col-1 about homepage_content">
+        <h2>About</h2>
+        <hr>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Ut venenatis ut magna sed auctor. Nullam dui elit, maximus
+           ac accumsan eget, pretium eu est. Nam tortor nunc, tempor
+           vitae vestibulum   </p>
+           <p>non, iaculis sit amet urna. Vestibulum
+           iaculis, ipsum sed posuere interdum, turpis nibh venenatis
+            odio, et  aliquam <a href="#">lacus sem</a> et mauris. Integer ac arcu laoreet,
+             gravida arcu volutpat, dignissim diam. Phasellus sed mauris
+             ac metus porttitor placerat sit amet quis augue. Nullam quis
+             lacus lorem. Donec</p>
+             <p>
+               quis enim nec libero accumsan lacinia. Aliquam
+              sed turpis sapien. Pellentesque at facilisis diam. Suspendisse ac
+               scelerisque sapien. Aliquam porttitor augue risus, sollicitudin
+                pellentesque neque eleifend nec. Nam egestas vehicula dictum.
+                In eu laoreet nulla, eget aliquet sapien. Nullam pellentesque
+                mauris eget urna elementum tincidunt. Donec eu tristique nulla.
+                </p>
+             </div>
+             <div class="col-2 homepage_content">
+               <h2>Stuff</h2>
+               <hr>
+
+                <% @posts.each do |post| %>
+                <h3><a href="#"><%= link_to post.title, post %></a></h3>
+                <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+                <% end %>
+            </div>
+            <div class="col-3 homepage_content">
+              <h2>Mes projets</h2>
+              <hr>
+              <h3>Voyage Bora khai</h3>
+              <p class="date">Vendredi 4 Décembre</p>
+              <h3>Séjour Australie</h3>
+              <p class="date">Vendredi 4 Décembre</p>
+              <h3>Aide humanitaire</h3>
+              <p class="date">Vendredi 4 Décembre</p>
+           </div>
+          </div>
